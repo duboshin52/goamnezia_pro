@@ -286,7 +286,7 @@ elif [ -n "$LOCAL_TREE" ]; then
         RESOLVED_REF="$_prev_ref"
     fi
     unset _prev_ref
-elif [ -n "$PAT" ]; then
+else
     _rc=0
     _sha=$(_head_sha "$BRANCH") || _rc=$?
     if [ "$_rc" = 0 ] && [ -n "$_sha" ]; then
